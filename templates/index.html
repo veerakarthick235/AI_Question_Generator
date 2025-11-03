@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Question Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated background particles -->
+  <div class="particles"></div>
+  <div class="particles"></div>
+  <div class="particles"></div>
+  
+  <div class="container">
+    <div class="header-glow"></div>
+    <h1 class="main-title">
+      <span class="ai-icon">🤖</span>
+      <span class="title-text">QUANTUM AI</span>
+      <span class="subtitle">Question Generator</span>
+    </h1>
+    
+    <div class="input-section">
+      <div class="input-wrapper">
+        <input type="text" id="topic" placeholder="Enter topic (e.g., Machine Learning)" class="futuristic-input">
+        <div class="input-glow"></div>
+      </div>
+      <div class="input-wrapper">
+        <input type="number" id="num" placeholder="Number of questions" min="1" max="10" class="futuristic-input">
+        <div class="input-glow"></div>
+      </div>
+      <button onclick="generateQuestions()" class="generate-btn">
+        <span class="btn-text">GENERATE</span>
+        <span class="btn-glow"></span>
+        <span class="btn-particles">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+    <div id="loader" class="loader" style="display:none;">
+      <div class="loader-content">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <span class="loader-text">GENERATING QUESTIONS...</span>
+      </div>
+    </div>
+
+    <form id="quizForm" style="display:none;">
+      <div id="questions"></div>
+      <button type="button" id="submitBtn" onclick="submitAnswers()" class="submit-btn">
+        <span class="btn-text">SUBMIT ANSWERS</span>
+        <span class="btn-glow"></span>
+      </button>
+    </form>
+
+    <div id="result" class="result-section"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
