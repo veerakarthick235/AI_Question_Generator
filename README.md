@@ -1,4 +1,4 @@
-# 🧠 AI Question Generator using Gemini 2.5 Flash
+## 🧠 AI Question Generator
 
 An **AI-powered Question Generator** built with **Python (Flask)**, **HTML**, **CSS**, and **JavaScript**, integrated with **AI**.  
 It allows users to enter a **topic** and **number of questions**, then automatically generates **multiple-choice questions (MCQs)** with correct answers.
@@ -82,4 +82,5 @@ Then open your browser and go to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ## 📜 License
 MIT License
+
 
